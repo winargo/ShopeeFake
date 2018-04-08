@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3d3d3">
+    <LinearLayout
+        android:id="@+id/cart"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginBottom="1sp"
+        android:orientation="horizontal">
+        <ImageView
+            android:background="@drawable/belanjaan"
+            android:layout_width="0sp"
+            android:layout_weight="0.25"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:textSize="30px"
+            android:text="Belanjaanku"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="0sp"
+            android:text="Lihat Riwayat Pembelanjaan"
+            android:layout_gravity="center"
+            android:textSize="30px"
+            android:textAlignment="textEnd"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="0.1"
+            android:layout_height="15sp"
+            android:background="@drawable/arrow"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20sp"
+        >
+        <ImageButton
+            android:id="@+id/belumbayar"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/belumbayar"/>
+        <ImageButton
+            android:id="@+id/dikemas"
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dikemas"/>
+        <ImageButton
+            android:id="@+id/dikirim"
+            android:layout_width="0sp"
+            android:layout_weight="0.9"
+            android:layout_height="match_parent"
+            android:background="@drawable/dikirim"/>
+        <ImageButton
+            android:id="@+id/pengembalian"
+            android:layout_width="0sp"
+            android:layout_weight="1.2"
+            android:layout_height="match_parent"
+            android:background="@drawable/pengembalian"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/shopeepay"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginBottom="1sp"
+        android:orientation="horizontal">
+        <ImageView
+            android:background="@drawable/shopeepay"
+            android:layout_width="0sp"
+            android:layout_weight="0.25"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="0sp"
+            android:textSize="30px"
+            android:layout_weight="1"
+            android:text="ShopeePay"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:textSize="30px"
+            android:layout_width="0sp"
+            android:text="Lihat ShopeePay Saya"
+            android:layout_gravity="center"
+            android:textAlignment="textEnd"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="0.1"
+            android:layout_height="15sp"
+            android:background="@drawable/arrow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/coinshopee"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginBottom="1sp"
+        android:orientation="horizontal">
+        <ImageView
+            android:background="@drawable/coin"
+            android:layout_width="0sp"
+            android:layout_weight="0.25"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="0sp"
+            android:textSize="30px"
+            android:layout_weight="1"
+            android:text="Koin Shopee Saya"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/coinleft"
+            android:layout_width="0sp"
+            android:text="koin"
+            android:textSize="30px"
+            android:layout_gravity="center"
+            android:textAlignment="textEnd"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="0.1"
+            android:layout_height="15sp"
+            android:background="@drawable/arrow"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lastseen"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginBottom="1sp"
+        android:orientation="horizontal">
+        <ImageView
+            android:background="@drawable/trakhirdilihat"
+            android:layout_width="0sp"
+            android:layout_weight="0.25"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="30px"
+            android:textColor="#000000"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:text="Terakhir Dilihat"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="30px"
+            android:textColor="#000000"
+            android:layout_width="0sp"
+            android:text="Produk yang pernah dilihat"
+            android:layout_gravity="center"
+            android:textAlignment="textEnd"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="0.1"
+            android:layout_height="15sp"
+            android:background="@drawable/arrow"/>
+    </LinearLayout>
+</LinearLayout>

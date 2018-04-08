@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10pt"
+        android:padding="10px">
+        <AutoCompleteTextView
+            android:textColorHint="#808080"
+            android:textColor="#000000"
+            android:id="@+id/emaillogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:hint="Email"/>
+        <EditText
+            android:textColor="#000000"
+            android:textColorHint="#808080"
+            android:id="@+id/passwordlogin"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10pt"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <Button
+            android:backgroundTint="@color/ColorPrimary"
+            android:textColor="@color/WhiteColor"
+            android:id="@+id/btnloginlogin"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10pt"
+            android:layout_height="wrap_content"
+            android:text="Login"/>
+    </LinearLayout>
+</RelativeLayout>

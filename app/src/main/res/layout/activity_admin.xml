@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivDiskonAdmin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_green_dark"
+            android:padding="12dp"
+            android:src="@drawable/ic_discount" />
+
+        <TextView
+            android:id="@+id/txt_DiskonAdmin"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivDiskonAdmin"
+            android:layout_marginTop="8dp"
+            android:text="Diskon"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/ivShoppingAdmin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ivDiskonAdmin"
+            android:background="@android:color/holo_purple"
+            android:padding="12dp"
+            android:src="@drawable/ic_shopping" />
+
+        <TextView
+            android:id="@+id/txt_shoppingAdmin"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivShoppingAdmin"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/txt_DiskonAdmin"
+            android:text="Penjualan"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/ivComplaintAdmin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ivShoppingAdmin"
+            android:background="@android:color/holo_red_dark"
+            android:padding="12dp"
+            android:src="@drawable/ic_complaint" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivShoppingAdmin"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/txt_shoppingAdmin"
+            android:text="Complaint"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:id="@+id/textView12" />
+
+        <Button
+            android:id="@+id/btnlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView12"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txt_shoppingAdmin"
+            android:layout_marginTop="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Logout"
+            android:textColor="@color/ColorPrimary"></Button>
+    </RelativeLayout>
+
+</LinearLayout>

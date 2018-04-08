@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <ImageView
+                android:id="@+id/image_namaproduk"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:background="@color/Gray" />
+            <TextView
+                android:id="@+id/namaproduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_produk"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="10sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@id/image_namaproduk"/>
+            <TextView
+                android:id="@+id/hargaproduk"
+                android:layout_below="@id/namaproduk"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:textSize="8sp"
+                android:text="@string/harga_produk"
+                android:textColor="@color/ColorPrimary"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/hargaproduk"
+                android:id="@+id/likecount"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:textSize="8sp"
+                android:drawablePadding="4sp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:drawableLeft="@drawable/like_tap"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/hargaproduk"
+                android:textSize="12sp"
+                android:layout_marginRight="12sp"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

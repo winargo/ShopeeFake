@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_riwayatPenarikan"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerVertical="true"
+
+            android:background="@drawable/ic_riwaya_penarikan"/>
+
+        <TextView
+            android:id="@+id/txt_penarikan"
+            android:layout_toRightOf="@id/img_riwayatPenarikan"
+            android:layout_width="wrap_content"
+            android:text="Penarikan"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_rekPenarikan"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_riwayatPenarikan"
+            android:layout_below="@id/txt_penarikan"
+            android:layout_width="wrap_content"
+            android:text="Ke Rek.: "
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_tglPenarikan"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_riwayatPenarikan"
+            android:layout_below="@id/txt_rekPenarikan"
+            android:layout_width="wrap_content"
+            android:text="29-12-2017 "
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_nominalPenarikan"
+            android:text="-Rp264.500"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+
+    </RelativeLayout>
+
+    <!-- Tampilan Pembayaran
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_riwayatPembayaran"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerVertical="true"
+            android:background="@drawaic_riwayat_pembayaranaran"/>
+
+        <TextView
+            android:id="@+id/txt_pembayaran"
+            android:layout_toRightOf="@id/img_riwayatPembayaran"
+            android:layout_width="wrap_content"
+            android:text="Pembayaran"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_pembayaranPesanan"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_riwayatPembayaran"
+            android:layout_below="@id/txt_pembayaran"
+            android:layout_width="wrap_content"
+            android:text="No. Pesanan : "
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_tglPembayaran"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_riwayatPembayaran"
+            android:layout_below="@id/txt_pembayaranPesanan"
+            android:layout_width="wrap_content"
+            android:text="29-12-2017 "
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_nominalPembayaran"
+            android:text="+Rp264.500"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+
+    </RelativeLayout>
+    -->
+
+</LinearLayout>

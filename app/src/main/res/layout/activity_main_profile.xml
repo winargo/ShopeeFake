@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context="com.fake.shopee.shopeefake.Main_pages.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:background="@drawable/bg_atas"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_atas"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionBarDivider" />
+
+        <ImageButton
+            android:id="@+id/profilecart"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/cartprofile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/pengikutikut"
+            android:layout_width="112dp"
+            android:layout_height="12dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="no data"
+            android:textColor="@android:color/background_light"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/imageView2"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="108dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="Guest"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imageView2"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            android:layout_marginStart="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/profile2"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="@+id/imageView"
+            app:layout_constraintRight_toRightOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.77" />
+
+        <Button
+            android:textColor="@color/ColorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="8dp"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"></Button>
+
+        <Button
+            android:textColor="@color/ColorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/btnlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginTop="8dp"
+            android:text="Log Out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"></Button>
+
+        <Button
+            android:textColor="@color/ColorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/btnlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"></Button>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.TabLayout
+        android:textColor="#000000"
+        app:tabTextColor="#000000"
+        app:tabSelectedTextColor="#000000"
+        android:id="@+id/tabsprofile"
+        android:layout_below="@+id/topimage"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@id/tabsprofile"
+        android:layout_above="@id/linebottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/linetop"
+        android:background="#D3D3D3"
+        android:layout_below="@+id/mmtop1"/>-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/linebottom"
+        android:background="#D3D3D3"
+        android:layout_above="@+id/mmbottom1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:id="@+id/mmbottom1"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <ImageButton
+            android:id="@+id/profilemainmenu"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/mainmenu0"
+            />
+        <ImageButton
+            android:id="@+id/profiletimeline"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/timeline0"
+            />
+        <ImageButton
+            android:id="@+id/profilecamera"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/maincamera"
+            />
+        <ImageButton
+            android:id="@+id/profilenotif"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/notif0"
+            />
+        <ImageButton
+            android:id="@+id/profileprofile"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile1"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

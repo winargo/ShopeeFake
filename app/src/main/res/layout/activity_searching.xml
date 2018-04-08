@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:id="@+id/mmtop1"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/searchback"
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="3pt"
+            android:layout_gravity="center"
+            android:background="@drawable/backarrow"
+            />
+        <EditText
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_width="0sp"
+            android:id="@+id/searchbox"
+            android:layout_height="90px"
+            android:background="@drawable/searchbox"
+            android:hint="Search Products and Shop"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_weight="1">
+        </EditText>
+        <Button
+            android:layout_width="0sp"
+            android:id="@+id/closeback"
+            android:background="@drawable/exbutton"
+            android:layout_height="15pt"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/linetop"
+        android:background="#D3D3D3"
+        android:layout_below="@+id/mmtop1"/>
+
+    <ListView
+        android:background="#fff"
+        android:id="@+id/lvsearch"
+        android:layout_width="match_parent"
+        android:layout_below="@id/linetop"
+        android:layout_height="match_parent"></ListView>
+
+</RelativeLayout>

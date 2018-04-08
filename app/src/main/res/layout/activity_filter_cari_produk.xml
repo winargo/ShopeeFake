@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kategori"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_kategori1Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 1" />
+
+                    <Button
+                        android:id="@+id/btn_kategori3Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 3" />
+
+                    <Button
+                        android:id="@+id/btn_kategori5Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 5" />
+
+                    <Button
+                        android:id="@+id/btn_kategori7Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 7" />
+
+                    <Button
+                        android:id="@+id/btn_kategori9Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 9" />
+
+                    <Button
+                        android:id="@+id/btn_kategori11Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_kategori2Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 2" />
+
+                    <Button
+                        android:id="@+id/btn_kategori4Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 4" />
+
+                    <Button
+                        android:id="@+id/btn_kategori6Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 6" />
+
+                    <Button
+                        android:id="@+id/btn_kategori8Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 8" />
+
+                    <Button
+                        android:id="@+id/btn_kategori10Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 10" />
+
+                    <Button
+                        android:id="@+id/btn_kategori12Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Kategori 12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:backgroundTint="#fff"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:text="Sembunyikan"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/Gray"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Dikirim dari"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_pengiriman1Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="GREATER JAKARTA" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman2Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="JAWA BARAT" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman3Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="JAWA TENGAH" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman4Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="BANTEN" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman5Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="DI YOGYAKARTA" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman6Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="LAMPUNG" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman7Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="SULAWESI SELATAN" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman8Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="JAMBI" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman9Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="KALIMANTAN SELATAN" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman10Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="DALAM NEGERI" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_pengiriman11Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="DKI JAKARTA" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman12Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="JAWA TIMUR" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman13Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="KEPULAUAN RIAU" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman14Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="SUMATERA UTARA" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman15Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="BALI" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman16Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="SUMATERA SELATAN" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman17Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="RIAU" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman18Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="KALIMANTAN TIMUR" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman19Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="KALIMANTAN BARAT" />
+
+                    <Button
+                        android:id="@+id/btn_pengiriman20Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="LUAR NEGERI" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_pengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:backgroundTint="#fff"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:text="Sembunyikan"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/Gray"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Pengiriman"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi1Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="GO-SEND SAME DAY" />
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi2Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="@string/j_t_express"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi3Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Pos Kilat Khusus"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi4Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Dari Luar Negeri"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi5Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="JNE Regular"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi6Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="JNE OKE" />
+
+                    <Button
+                        android:id="@+id/btn_ekpedisi7Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="GO-SEND INSTANT" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ekspedisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:backgroundTint="#fff"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:text="Sembunyikan"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/Gray"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Tipe Penjual"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/Gray"
+                    android:text="Shopee Mall"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/Gray"
+                    android:text="Star Seller"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/Gray"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Program Promosi"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Grosir"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Gratis Ongkir"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Cicilan"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="Dengan Diskon"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Gray"
+                        android:text="COD" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/Gray"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Kondisi"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/Gray"
+                    android:text="Baru"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/Gray"
+                    android:text="Pernah Dipakai"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/Gray"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Batas Harga(Rp)"
+                android:textColor="@color/WarnaTeks"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="72dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/Gray"
+                    android:hint="MIN"
+                    android:textAlignment="center"
+                    android:inputType="number"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/Gray"
+                    android:hint="MAX"
+                    android:textAlignment="center"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+        <TextView
+            android:id="@+id/txt_footer1Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Jumlah Produk"
+            android:layout_centerInParent="true"
+            android:textColor="@color/ColorPrimary"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/txt_footer2Filter"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/txt_footer1Filter"
+            android:layout_height="wrap_content"
+            android:text=" Produk" />
+        <Button
+            android:layout_toLeftOf="@id/btn_footer2Filter"
+            android:id="@+id/btn_footer1Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATUR ULANG"
+            android:textColor="@color/ColorPrimary"/>
+        <Button
+            android:id="@+id/btn_footer2Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Terapkan"
+            android:backgroundTint="@color/ColorPrimary"
+            android:textColor="@color/WhiteColor"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+</RelativeLayout>

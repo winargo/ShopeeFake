@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/kode_diskon"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/ic_kode_diskon"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="Kode diskon" />
+
+    <EditText
+        android:id="@+id/potongan_diskon"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/ic_potongan_diskon"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="Potongan" />
+
+    <EditText
+        android:id="@+id/waktu_diskon"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/ic_time"
+        android:drawablePadding="8dp"
+        android:hint="Masa berlaku" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@color/ColorPrimary"
+        android:text="Simpan"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

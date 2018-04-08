@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">ShopeeFake</string>
+    <string name="title_activity_main_cart">main_cart</string>
+    <string name="pesan_baru_kosong">Tidak Ada Pesan Baru</string>
+    <string name="jdl">Judul</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="tgl_chat">Tanggal Chat</string>
+    <string name="terkait">Terkait</string>
+    <string name="terbaru">Terbaru</string>
+    <string name="terlaris">Terlaris</string>
+    <string name="harga">Harga</string>
+    <string name="shopee_mall">Shopee Mall</string>
+    <string name="star_seller">Star Seller</string>
+    <string name="dari">Dari</string>
+    <string name="pengiriman">Pengiriman</string>
+    <string name="jenis_produk">Jenis Produk</string>
+    <string name="nama_penjual">Nama Penjual</string>
+    <string name="nama_produk">nama produk</string>
+    <string name="harga_produk">Harga Produk</string>
+    <string name="belum_ada_penilaian">Belum ada penilaian</string>
+    <string name="j_t_express"><![CDATA[J&T Express]]></string>
+    <string name="title_activity_sample">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="produk_yang_pernah_dilihat">Produk yang pernah dilihat</string>
+    <string name="terakhir_dilihat">Terakhir Dilihat</string>
+    <string name="lihat_riwayat_pembelanjaan">Lihat Riwayat Pembelanjaan</string>
+    <string name="belanjaanku">Belanjaanku</string>
+    <string name="apa_aja_sih_kelebihan_berbelanja_berjualan_di_sh"><![CDATA[Apa aja sih kelebihan berbelanja & berjualan di Sh...]]></string>
+</resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Light" />
+
+    <!--Filter untuk terkait, terbaru, terlaris & harga-->
+    <LinearLayout
+        android:id="@+id/filterCariProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/terkait"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/terbaru"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/terlaris"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/harga"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <!--Filter berdasarkan penjual-->
+    <LinearLayout
+        android:id="@+id/filterPenjual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_radiusbutton"
+            android:backgroundTint="@color/Gray"
+            android:text="@string/shopee_mall"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_radiusbutton"
+            android:backgroundTint="@color/Gray"
+            android:text="@string/star_seller"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_radiusbutton"
+            android:backgroundTint="@color/Gray"
+            android:text="@string/dari"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_radiusbutton"
+            android:backgroundTint="@color/Gray"
+            android:text="@string/pengiriman"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!--HorizontalScollview untuk jenis produk filter-->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Gray">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="124dp"
+                android:layout_height="52dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/background_radiusbutton"
+                android:backgroundTint="#2974ff"
+                android:text="@string/jenis_produk"
+                android:textColor="@color/WhiteColor" />
+
+            <Button
+                android:layout_width="124dp"
+                android:layout_height="52dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/background_radiusbutton"
+                android:backgroundTint="#05bdda"
+                android:text="@string/jenis_produk"
+                android:textColor="@color/WhiteColor" />
+
+            <Button
+                android:layout_width="124dp"
+                android:layout_height="52dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/background_radiusbutton"
+                android:backgroundTint="#05da68"
+                android:text="@string/jenis_produk"
+                android:textColor="@color/WhiteColor" />
+
+            <Button
+                android:layout_width="124dp"
+                android:layout_height="52dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/background_radiusbutton"
+                android:backgroundTint="#2974ff"
+                android:text="@string/jenis_produk"
+                android:textColor="@color/WhiteColor" />
+
+            <Button
+                android:layout_width="124dp"
+                android:layout_height="52dp"
+                android:background="@drawable/background_radiusbutton"
+                android:backgroundTint="#05bdda"
+                android:text="@string/jenis_produk"
+                android:textColor="@color/WhiteColor" />
+
+            <Button
+                android:layout_width="124dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/background_radiusbutton"
+                android:backgroundTint="#2974ff"
+                android:text="@string/jenis_produk"
+                android:textColor="@color/WhiteColor" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Gray">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lst_item_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>
