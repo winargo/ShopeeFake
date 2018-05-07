@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\Android\project\ShopeeFake\Illuminati_Shopee.iml" filepath="D:\Android\project\ShopeeFake\Illuminati_Shopee.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShopeeFake.iml" filepath="$PROJECT_DIR$/ShopeeFake.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
