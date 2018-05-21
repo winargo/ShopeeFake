@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "60826284823-2eg595murn94pd8fb47ljp4vof33d6fd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fake.shopee.shopeefake",
+            "certificate_hash": "6227c6a32ec009c4e592a2ec56086ff5cc9e6cae"
+          }
+        },
+        {
           "client_id": "60826284823-c5qhqh6botk4frscv7bb38jka41u7uov.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

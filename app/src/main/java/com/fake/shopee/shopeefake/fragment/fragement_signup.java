@@ -108,8 +108,6 @@ public class fragement_signup extends Fragment {
             }
         }
 
-        ;
-
         @Override
         protected String doInBackground(String... params) {
             Log.e("data",username+" "+email+" "+password);
