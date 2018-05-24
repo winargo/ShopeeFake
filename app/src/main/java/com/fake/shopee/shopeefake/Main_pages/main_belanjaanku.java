@@ -76,7 +76,6 @@ public class main_belanjaanku extends FragmentActivity {
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setOffscreenPageLimit(6);
         mPager.setAdapter(mPagerAdapter);
-        mPager.setCurrentItem(Integer.parseInt(session.currentactivity));
 
         tabLayout = (TabLayout) findViewById(R.id.tabbelanja);
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);

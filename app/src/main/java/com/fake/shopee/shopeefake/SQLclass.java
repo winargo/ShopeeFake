@@ -16,12 +16,12 @@ import java.sql.Statement;
 public class SQLclass {
 
     public String status = "";
-    public static String ip = "192.168.1.15";
+    public static String ip = "172.22.184.43";
     public static String db = "shopee";
     public static String un = "sa";
     public static String password = "12345";
     public static String port = "1433";
-    public static String instance="sqlexpress";
+    public static String instance="";
     Connection conn = null;
 
 

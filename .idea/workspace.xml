@@ -36,7 +36,7 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="138">
               <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
               <folding />
             </state>
@@ -49,21 +49,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="50">
               <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_galery.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_galery.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,34 +66,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragement_signup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/fragment/fragement_signup.java">
+      <file leaf-file-name="SQLclass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/SQLclass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2300">
-              <caret line="120" column="66" lean-forward="false" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+            <state relative-caret-position="225">
+              <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_belanjaanku.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_belanjaanku.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="115" column="13" lean-forward="true" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://D:/sdk/sources/android-26/android/app/Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="47">
+              <caret line="5985" column="11" lean-forward="false" selection-start-line="5985" selection-start-column="11" selection-end-line="5990" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cartadapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/adapter/cartadapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#692#693#0" expanded="false" />
+                <element signature="e#727#728#0" expanded="false" />
+                <element signature="e#1015#1016#0" expanded="false" />
+                <element signature="e#1039#1040#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SQLclass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/SQLclass.java">
+      <file leaf-file-name="cart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/enumclass/cart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="127" column="42" lean-forward="false" selection-start-line="127" selection-start-column="42" selection-end-line="127" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_cart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_cart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="1200">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="e#510#511#0" expanded="false" />
+                <element signature="e#554#555#0" expanded="false" />
+                <element signature="e#608#609#0" expanded="false" />
+                <element signature="e#654#655#0" expanded="false" />
+                <element signature="e#704#705#0" expanded="false" />
+                <element signature="e#746#747#0" expanded="false" />
+                <element signature="e#783#784#0" expanded="false" />
+                <element signature="e#816#817#0" expanded="false" />
+                <element signature="e#868#869#0" expanded="false" />
+                <element signature="e#912#913#0" expanded="false" />
+                <element signature="e#1083#1084#0" expanded="false" />
+                <element signature="e#1121#1122#0" expanded="false" />
+                <element signature="e#1157#1158#0" expanded="false" />
+                <element signature="e#1189#1190#0" expanded="false" />
+                <element signature="e#1227#1228#0" expanded="false" />
+                <element signature="e#1261#1262#0" expanded="false" />
+                <element signature="e#1292#1293#0" expanded="false" />
+                <element signature="e#1322#1323#0" expanded="false" />
+                <element signature="e#1359#1360#0" expanded="false" />
+                <element signature="e#1392#1393#0" expanded="false" />
+                <element signature="e#1437#1438#0" expanded="false" />
+                <element signature="e#1478#1479#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,43 +150,28 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="1350">
               <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flat_1.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flat_1.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/flat_1.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_belanjaanku.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_belanjaanku.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2361#2362#0" expanded="false" />
-                <element signature="e#2401#2402#0" expanded="false" />
-                <element signature="e#3699#3700#0" expanded="false" />
-                <element signature="e#3732#3733#0" expanded="false" />
-                <element signature="e#5523#5524#0" expanded="false" />
-                <element signature="e#5567#5568#0" expanded="false" />
-                <element signature="e#5631#5632#0" expanded="false" />
-                <element signature="e#5688#5689#0" expanded="false" />
-                <element signature="e#5739#5740#0" expanded="false" />
-                <element signature="e#5779#5780#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -166,10 +184,13 @@
       <replace>15.0.1</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\Riandy\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\rwina\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -2141,9 +2162,12 @@
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/fragment/fragement_signup.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/SQLclass.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cart.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/enumclass/cart.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/adapter/cartadapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/SQLclass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_belanjaanku.java" />
       </list>
     </option>
   </component>
@@ -2168,8 +2192,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2191,9 +2217,19 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+              <option name="myItemId" value="ShopeeFake" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2206,68 +2242,16 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopeeFake" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopeeFake" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flat_1.png" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopeeFake" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+              <option name="myItemId" value="shopeefake" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2334,6 +2318,8 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -2364,7 +2350,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526917668652" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527146779715" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2382,6 +2368,8 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -2410,7 +2398,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526917668653" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527146779716" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2540,6 +2528,8 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -2570,7 +2560,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526917668677" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527146779726" />
       </method>
     </configuration>
     <list size="1">
@@ -2608,27 +2598,26 @@
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.4785177" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.326742" sideWeight="0.46616542" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6722689" sideWeight="0.10150376" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22222222" sideWeight="0.120300755" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956687" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6722689" sideWeight="0.89849627" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22222222" sideWeight="0.87969923" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2706767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26745436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2638,6 +2627,7 @@
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2649,54 +2639,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/loginactivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3750">
-          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2581#2582#0" expanded="false" />
-            <element signature="e#2614#2615#0" expanded="false" />
-            <element signature="e#3544#3545#0" expanded="false" />
-            <element signature="e#3588#3589#0" expanded="false" />
-            <element signature="e#3652#3653#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="false" />
-            <element signature="e#3760#3761#0" expanded="false" />
-            <element signature="e#3792#3793#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3500">
-          <caret line="140" column="1" lean-forward="false" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_belanjaanku.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2361#2362#0" expanded="false" />
-            <element signature="e#2401#2402#0" expanded="false" />
-            <element signature="e#3699#3700#0" expanded="false" />
-            <element signature="e#3732#3733#0" expanded="false" />
-            <element signature="e#5523#5524#0" expanded="false" />
-            <element signature="e#5567#5568#0" expanded="false" />
-            <element signature="e#5631#5632#0" expanded="false" />
-            <element signature="e#5688#5689#0" expanded="false" />
-            <element signature="e#5739#5740#0" expanded="false" />
-            <element signature="e#5779#5780#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_diskon_dashboard.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -2704,7 +2646,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2728,17 +2669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3750">
           <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2581#2582#0" expanded="false" />
-            <element signature="e#2614#2615#0" expanded="false" />
-            <element signature="e#3544#3545#0" expanded="false" />
-            <element signature="e#3588#3589#0" expanded="false" />
-            <element signature="e#3652#3653#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="false" />
-            <element signature="e#3760#3761#0" expanded="false" />
-            <element signature="e#3792#3793#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2746,9 +2676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3500">
           <caret line="140" column="1" lean-forward="true" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2756,19 +2683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2361#2362#0" expanded="false" />
-            <element signature="e#2401#2402#0" expanded="false" />
-            <element signature="e#3699#3700#0" expanded="false" />
-            <element signature="e#3732#3733#0" expanded="false" />
-            <element signature="e#5523#5524#0" expanded="false" />
-            <element signature="e#5567#5568#0" expanded="false" />
-            <element signature="e#5631#5632#0" expanded="false" />
-            <element signature="e#5688#5689#0" expanded="false" />
-            <element signature="e#5739#5740#0" expanded="false" />
-            <element signature="e#5779#5780#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2779,7 +2693,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2795,9 +2708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3075">
           <caret line="123" column="68" lean-forward="true" selection-start-line="123" selection-start-column="68" selection-end-line="123" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2816,7 +2726,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2832,9 +2741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1625">
           <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2853,7 +2759,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2869,9 +2774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2890,7 +2792,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3029,7 +2930,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3037,17 +2937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3150">
           <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2581#2582#0" expanded="false" />
-            <element signature="e#2614#2615#0" expanded="false" />
-            <element signature="e#3544#3545#0" expanded="false" />
-            <element signature="e#3588#3589#0" expanded="false" />
-            <element signature="e#3652#3653#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="false" />
-            <element signature="e#3760#3761#0" expanded="false" />
-            <element signature="e#3792#3793#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3055,29 +2944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3100">
           <caret line="140" column="1" lean-forward="false" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_belanjaanku.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2361#2362#0" expanded="false" />
-            <element signature="e#2401#2402#0" expanded="false" />
-            <element signature="e#3699#3700#0" expanded="false" />
-            <element signature="e#3732#3733#0" expanded="false" />
-            <element signature="e#5523#5524#0" expanded="false" />
-            <element signature="e#5567#5568#0" expanded="false" />
-            <element signature="e#5631#5632#0" expanded="false" />
-            <element signature="e#5688#5689#0" expanded="false" />
-            <element signature="e#5739#5740#0" expanded="false" />
-            <element signature="e#5779#5780#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3085,41 +2951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2300">
           <caret line="120" column="66" lean-forward="false" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/SQLclass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="127" column="42" lean-forward="false" selection-start-line="127" selection-start-column="42" selection-end-line="127" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3128,7 +2959,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="975">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
@@ -3139,7 +2970,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="50">
           <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding />
         </state>
@@ -3150,7 +2981,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="1350">
           <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
           <folding />
         </state>
@@ -3159,6 +2990,97 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/flat_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/enumclass/cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#554#555#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#746#747#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#816#817#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#912#913#0" expanded="false" />
+            <element signature="e#1083#1084#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1157#1158#0" expanded="false" />
+            <element signature="e#1189#1190#0" expanded="false" />
+            <element signature="e#1227#1228#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <element signature="e#1322#1323#0" expanded="false" />
+            <element signature="e#1359#1360#0" expanded="false" />
+            <element signature="e#1392#1393#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1478#1479#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/adapter/cartadapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#692#693#0" expanded="false" />
+            <element signature="e#727#728#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#1039#1040#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/sdk/sources/android-26/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="5985" column="11" lean-forward="false" selection-start-line="5985" selection-start-column="11" selection-end-line="5990" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/SQLclass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fake/shopee/shopeefake/Main_pages/main_belanjaanku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="115" column="13" lean-forward="true" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
