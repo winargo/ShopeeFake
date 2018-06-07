@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.fake.shopee.shopeefake"
         minSdkVersion 19
@@ -20,6 +19,8 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.pddstudio:urlshortener:1.0.2'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.google.firebase:firebase-auth:11.0.4'

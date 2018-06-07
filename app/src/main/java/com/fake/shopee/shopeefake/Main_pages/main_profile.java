@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.upload.activity_galery;
 import com.fake.shopee.shopeefake.upload.camera_test;
 import com.fake.shopee.shopeefake.fragment.fragment_profile;
@@ -57,6 +58,7 @@ public class main_profile extends FragmentActivity {
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser==null){}
         else {
+            generator.userlogin=currentUser.getEmail();
             session.setusename(currentUser.getEmail());
         }
 
@@ -118,7 +120,7 @@ public class main_profile extends FragmentActivity {
             btnsignup.setVisibility(View.GONE);
 
             //username set
-            username.setText(session.getusename());
+            username.setText(session.getusename().replace("@gmail.com",""));
 
             btnlogout.setOnClickListener(new View.OnClickListener() {
                 @Override

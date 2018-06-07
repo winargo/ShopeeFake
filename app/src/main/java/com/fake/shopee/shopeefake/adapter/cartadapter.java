@@ -3,12 +3,9 @@ package com.fake.shopee.shopeefake.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.fake.shopee.shopeefake.R;
-import com.fake.shopee.shopeefake.ShopeePay.RecyclerAdapter;
-import com.fake.shopee.shopeefake.enumclass.cart;
+import com.fake.shopee.shopeefake.cartview.cart;
 
 import java.util.List;
 

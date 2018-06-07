@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.fake.shopee.shopeefake.ProductSearch.searching;
 import com.fake.shopee.shopeefake.R;
+import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.upload.activity_galery;
 import com.fake.shopee.shopeefake.upload.camera_test;
 import com.fake.shopee.shopeefake.session_class;
@@ -132,10 +133,11 @@ public class MainActivity extends Activity {
         }
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        generator.userlogin=currentUser.getEmail();
         updateUI(currentUser);
     }
 
     private void updateUI(FirebaseUser currentUser) {
-
+        generator.userlogin = currentUser.getEmail();
     }
 }
