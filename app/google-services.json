@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "60826284823-v0s220j1v1p0qicqanlabvte03o8jr90.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fake.shopee.shopeefake",
+            "certificate_hash": "622465487c1d1377da28927e9e4523c470b56865"
+          }
+        },
+        {
           "client_id": "60826284823-2eg595murn94pd8fb47ljp4vof33d6fd.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -61,6 +69,10 @@
             "package_name": "com.fake.shopee.shopeefake",
             "certificate_hash": "9df9704b2ec95471e06b4ada0109cbf71cb2dd29"
           }
+        },
+        {
+          "client_id": "60826284823-s36tr686l6152a7rueinjh8vo04pm9rg.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "60826284823-s36tr686l6152a7rueinjh8vo04pm9rg.apps.googleusercontent.com",

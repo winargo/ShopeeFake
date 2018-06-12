@@ -27,23 +27,13 @@ public class main_cart extends Activity {
         setContentView(R.layout.activity_cart);
 
         mAuth = FirebaseAuth.getInstance();
-        minus = (Button) findViewById(R.id.btn_minusCheckout);
-        plus = (Button) findViewById(R.id.btn_plsCheckout);
-        angka = (TextView) findViewById(R.id.txt_qtyCheckout);
-        minus.setOnClickListener(new View.OnClickListener() {
+
+        backarrowiage = findViewById(R.id.backarrow);
+
+        backarrowiage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String operators = "-";
-                temp = Integer.parseInt(angka.getText().toString());
-                angka.setText(angkachecker(temp,operators));
-            }
-        });
-        plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String operators = "+";
-                temp = Integer.parseInt(angka.getText().toString());
-                angka.setText(angkachecker(temp,operators));
+                finish();
             }
         });
     }
