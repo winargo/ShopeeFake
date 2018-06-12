@@ -61,6 +61,7 @@ public class resultadapter extends RecyclerView.Adapter<resultadapter.MyViewHold
                 @Override
                 public void onClick(View view) {
                     Intent a = new Intent(context,stock_detail.class);
+                    context.startActivity(a);
                 }
             });
             holder.harga.setText("Rp"+String.valueOf(movie.getHarga()));

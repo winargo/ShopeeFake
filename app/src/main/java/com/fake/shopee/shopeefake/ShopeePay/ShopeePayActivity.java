@@ -7,8 +7,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.fake.shopee.shopeefake.R;
+import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.session_class;
+
+import java.sql.ResultSet;
 
 public class ShopeePayActivity extends Activity {
+
+    session_class session;
+    SQLclass sqlclass;
 
     LinearLayout penarikanShopeePay, transaksiShopeePay;
 
@@ -17,9 +24,13 @@ public class ShopeePayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopee_pay);
 
+        sqlclass= new SQLclass();
+        session = new session_class(ShopeePayActivity.this);
+
+        ResultSet money = sqlclass.querydata("Select * from xuser where pemilik='"+session.getusename()+"'");
+
         penarikanShopeePay = (LinearLayout) findViewById(R.id.penarikan_shopeePay);
         transaksiShopeePay = (LinearLayout) findViewById(R.id.transaksi_shopeePay);
-
 
         penarikanShopeePay.setOnClickListener(new View.OnClickListener() {
             @Override

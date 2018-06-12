@@ -15,6 +15,7 @@ import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.Main_pages.main_belanjaanku;
 import com.fake.shopee.shopeefake.SQLclass;
 import com.fake.shopee.shopeefake.ShopeePay.RiwayatTransaksiActivity;
+import com.fake.shopee.shopeefake.ShopeePay.ShopeePayActivity;
 import com.fake.shopee.shopeefake.session_class;
 
 import java.sql.ResultSet;
@@ -121,12 +122,10 @@ public class fragment_profile extends Fragment{
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a = new Intent(getActivity(),RiwayatTransaksiActivity.class);
+                Intent a = new Intent(getActivity(),ShopeePayActivity.class);
                 startActivity(a);
             }
         });
-
-
         return rootView;
     }
 }

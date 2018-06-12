@@ -17,6 +17,7 @@ public class SQLclass {
 
     public String status = "";
     public static String ip = "172.22.184.43";
+    //public static String ip = "192.168.43.61";
     public static String db = "shopee";
     public static String un = "sa";
     public static String password = "12345";
