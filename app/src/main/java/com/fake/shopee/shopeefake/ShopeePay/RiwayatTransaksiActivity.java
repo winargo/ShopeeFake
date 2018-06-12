@@ -6,20 +6,24 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.fake.shopee.shopeefake.R;
+import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.session_class;
+
+import java.sql.ResultSet;
 
 public class RiwayatTransaksiActivity extends Activity {
+
+    SQLclass sqlclass;
+    session_class session;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_riwayat_transaksi);
+        setContentView(R.layout.activity_shopee_pay);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_riwayatTransaksi);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(this);
-        recyclerView.setAdapter(adapter);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 }
