@@ -168,7 +168,7 @@ public class fragment_login extends Fragment{
                                                 }
                                             };
 
-                                            AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(),R.style.AppCompatAlertDialogStyle));
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),R.style.AppCompatAlertDialogStyle);
                                             builder.setMessage("Admin account detected choice?").setPositiveButton("Admin page", dialogClickListener)
                                                     .setNegativeButton("User Page", dialogClickListener).show();
                                         }
