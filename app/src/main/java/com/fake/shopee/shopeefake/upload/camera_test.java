@@ -157,7 +157,7 @@ public class camera_test extends Activity {
         protected Void doInBackground(Void... args) {
             String temp = nameproduct.getText().toString();
 
-            String referencename = temp;
+            final String referencename = temp;
             StorageReference riversRef = mStorageRef.child(referencename + ".jpg");
 
             riversRef.putFile(targetUri)
@@ -175,7 +175,7 @@ public class camera_test extends Activity {
                                 String tempa = URLShortener.shortUrl(downloadUrl.toString());
                                 String b ="insert into stock values("+a+",'"+tempa+"','"+nameproduct.getText().toString()+"','"+harga.getText().toString().substring(3)+"',"+Integer.parseInt(stock.getText().toString())+",'"+kategori.getText().toString()+"','"+session.getusename()+"','"+berat.getText().toString()+"','"+keterangan.getText().toString()+"',0)";
                                 Log.e("b", b.toString());
-                                int result = sqlclass.queryexecute("insert into stock values("+a+",'"+tempa+"','"+nameproduct.getText().toString()+"','"+harga.getText().toString()+"',"+Integer.parseInt(stock.getText().toString())+",'"+kategori.getText().toString()+"','"+session.getusename()+"','"+berat.getText().toString()+"','"+keterangan.getText().toString()+"',0)");
+                                int result = sqlclass.queryexecute("insert into stock values("+a+",'"+tempa+"','"+referencename+".jpg"+"','"+nameproduct.getText().toString()+"','"+harga.getText().toString()+"',"+Integer.parseInt(stock.getText().toString())+",'"+kategori.getText().toString()+"','"+session.getusename()+"','"+berat.getText().toString()+"','"+keterangan.getText().toString()+"',0)");
                                 Log.e("data sql",String.valueOf(result));
                                 Log.e("data sql",tempa);
                             }catch (Exception e){

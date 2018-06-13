@@ -101,7 +101,7 @@ public class main_profile extends FragmentActivity {
                     session_class.currentactivity="profile";
                     Intent i = new Intent(main_profile.this,loginactivity.class);
                     startActivity(i);
-                    finish();
+                    generator.tempactivity=main_profile.this;
                 }
             });
             btnsignup.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +110,7 @@ public class main_profile extends FragmentActivity {
                     session_class.currentactivity="profile";
                     Intent i = new Intent(main_profile.this,loginactivity.class);
                     startActivity(i);
-                    finish();
+                    generator.tempactivity=main_profile.this;
                 }
             });
         }

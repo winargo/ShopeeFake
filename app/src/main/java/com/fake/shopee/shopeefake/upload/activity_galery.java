@@ -180,7 +180,7 @@ public class activity_galery extends Activity {
                                     a = count.getInt("jumlah");
                                 }
                                 String tempa = URLShortener.shortUrl(downloadUrl.toString());
-                                String b ="insert into stock values("+a+",'"+tempa+"','"+nameproduct.getText().toString()+"','"+harga.getText().toString()+"',"+Integer.parseInt(stock.getText().toString())+",'"+kategori.getText().toString()+"','"+session.getusename()+"','"+berat.getText().toString()+"','"+keterangan.getText().toString()+"',0)";
+                                String b ="insert into stock values("+a+",'"+tempa+"','"+referencename+".jpg"+"','"+nameproduct.getText().toString()+"','"+harga.getText().toString()+"',"+Integer.parseInt(stock.getText().toString())+",'"+kategori.getText().toString()+"','"+session.getusename()+"','"+berat.getText().toString()+"','"+keterangan.getText().toString()+"',0)";
                                 Log.e("b", b);
                                 int result = sqlclass.queryexecute(b);
                                 Log.e("data sql",String.valueOf(result));

@@ -21,6 +21,7 @@ import com.fake.shopee.shopeefake.Admin.AdminActivity;
 import com.fake.shopee.shopeefake.Main_pages.main_profile;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.session_class;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -138,6 +139,8 @@ public class fragment_login extends Fragment{
                                             z="Signed in As "+user.getEmail();
                                             session_class.tempcommand=0;
                                             isSuccess=true;
+                                            generator.tempactivity.finish();
+                                            generator.tempactivity=null;
                                             onPostExecute(z);
                                         }
                                         else {
@@ -152,7 +155,10 @@ public class fragment_login extends Fragment{
                                                     switch (which) {
                                                         case DialogInterface.BUTTON_POSITIVE:
                                                             z = "Signed in As " + user.getEmail();
+                                                            generator.userlogin=user.getEmail().toString();
                                                             isSuccess = true;
+                                                            generator.tempactivity.finish();
+                                                            generator.tempactivity=null;
                                                             session_class.tempcommand=1;
                                                             onPostExecute(z);
 
@@ -160,8 +166,11 @@ public class fragment_login extends Fragment{
 
                                                         case DialogInterface.BUTTON_NEGATIVE:
                                                             z = "Signed in As " + user.getEmail();
+                                                            generator.userlogin=user.getEmail().toString();
                                                             isSuccess = true;
                                                             session_class.tempcommand=0;
+                                                            generator.tempactivity.finish();
+                                                            generator.tempactivity=null;
                                                             onPostExecute(z);
                                                             break;
                                                     }
@@ -175,6 +184,8 @@ public class fragment_login extends Fragment{
                                         else {
                                             z = "Signed in As " + user.getEmail();
                                             isSuccess = true;
+                                            generator.tempactivity.finish();
+                                            generator.tempactivity=null;
                                             session_class.tempcommand=0;
                                             onPostExecute(z);
                                         }
@@ -192,6 +203,7 @@ public class fragment_login extends Fragment{
                                         Toast.LENGTH_SHORT).show();
                                 session_class session= new session_class(getActivity());
                                 session.setusename("");
+                                generator.userlogin="";
                                 z="Error Login";
                                 onPostExecute(z);
                             }

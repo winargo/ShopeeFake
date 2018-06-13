@@ -88,8 +88,7 @@ public class stock_detail extends AppCompatActivity {
                 //startActivity(a);
                 RequestQueue queue = Volley.newRequestQueue(stock_detail.this);
                 String url ="http://"+ generator.ip+":3000/insertitem?pemilik="+session.getusename()+"&stockid="+a+"&jumlah="+"1"+"&penjual="+b;
-                AlertDialog b = new AlertDialog.Builder(stock_detail.this,R.style.AppCompatAlertDialogStyle).setTitle("link").setMessage(url).show();
-
+                Log.e("URL", url);
 // Request a string response from the provided URL.
                 JsonObjectRequest jsonobject = new JsonObjectRequest(url, null,
                         new Response.Listener<JSONObject>() {
