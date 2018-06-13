@@ -11,8 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fake.shopee.shopeefake.Main_pages.main_cart;
+import com.fake.shopee.shopeefake.Main_pages.main_profile;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.fragment.fragment_profile_sell;
+import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.session_class;
 import com.squareup.picasso.Picasso;
 
@@ -88,7 +91,13 @@ public class stock_detail_seller extends AppCompatActivity {
                 int query = sqlclass.queryexecute("delete from stock where stock_id='"+a+"'");
 
                 if(query>=1){
+
+                    Intent a = new Intent(stock_detail_seller.this,main_profile.class);
+                    startActivity(a);
+
+                    generator.tempactivity.finish();
                     finish();
+
                     Toast.makeText(stock_detail_seller.this, "Hapus Berhasil", Toast.LENGTH_SHORT).show();
                 }
                 else{

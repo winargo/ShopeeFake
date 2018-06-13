@@ -2,6 +2,7 @@ package com.fake.shopee.shopeefake.fragment;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -27,6 +28,7 @@ import com.fake.shopee.shopeefake.ProductSearch.stock_detail;
 import com.fake.shopee.shopeefake.ProductSearch.stock_detail_seller;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.session_class;
 import com.fake.shopee.shopeefake.upload.activity_galery;
 import com.fake.shopee.shopeefake.upload.camera_test;
@@ -48,6 +50,11 @@ public class fragment_profile_sell extends Fragment{
     session_class session;
     resultadapter mAdapter;
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+    }
+
     List<result> movieList = new ArrayList<result>();
 
     public static int page=1;
@@ -59,6 +66,10 @@ public class fragment_profile_sell extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        generator.tempactivity=getActivity();
+        generator.tempadapter=null;
+
         ViewGroup rootView =(ViewGroup) inflater.inflate(
                         R.layout.fragment_beli_jual, container, false);
 
@@ -74,7 +85,7 @@ public class fragment_profile_sell extends Fragment{
             @Override
             public void onClick(View v) {
                 final CharSequence[] item = {"Kamera","Foto"};
-                AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+                AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity(),R.style.AppCompatAlertDialogStyle);
                 dialog.setTitle("Select");
                 dialog.setItems(item,new DialogInterface.OnClickListener() {
 
@@ -117,6 +128,8 @@ public class fragment_profile_sell extends Fragment{
 
 
         mAdapter = new resultadapter(movieList);
+        generator.templist=movieList;
+        generator.tempadapter=mAdapter;
         myproduct.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         myproduct.setItemAnimator(new DefaultItemAnimator());
         myproduct.setAdapter(mAdapter);

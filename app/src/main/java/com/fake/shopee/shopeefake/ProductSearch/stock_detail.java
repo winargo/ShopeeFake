@@ -34,7 +34,7 @@ import java.text.NumberFormat;
 
 public class stock_detail extends AppCompatActivity {
 
-    NumberFormat formatter = new DecimalFormat("####.###.####");
+    NumberFormat formatter = new DecimalFormat("###,###,###.00");
 
     TextView nama,harga,keterangan,kategori,berat,stock,penjual,tittletext,kointext;
     Button beli;
@@ -81,16 +81,14 @@ public class stock_detail extends AppCompatActivity {
         beli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
 
 
 
                 Intent a = new Intent(stock_detail.this,main_cart.class);
                 startActivity(a);
-=======
                 RequestQueue queue = Volley.newRequestQueue(stock_detail.this);
                 String url ="http://"+ generator.ip+":3000/insertitem?pemilik="+session.getusename()+"&stockid="+a+"&jumlah="+"1"+"&penjual="+b;
-                AlertDialog a = new AlertDialog.Builder(stock_detail.this,R.style.AppCompatAlertDialogStyle).setTitle("link").setMessage(url).show();
+                AlertDialog b = new AlertDialog.Builder(stock_detail.this,R.style.AppCompatAlertDialogStyle).setTitle("link").setMessage(url).show();
 
 // Request a string response from the provided URL.
                 JsonObjectRequest jsonobject = new JsonObjectRequest(url, null,
@@ -115,7 +113,6 @@ public class stock_detail extends AppCompatActivity {
                 queue.add(jsonobject);
                 //Intent a = new Intent(stock_detail.this,main_cart.class);
                 //startActivity(a);
->>>>>>> 50ced7e1794a906b31bdd4db50d257124a73cfcd
               /*  ResultSet query = sqlclass.querydata("select * from cart where pemilik='"+session.getusename()+"' and stock_id='"+a+"' and penjual_pemilik='"+penjual.getText().toString()+"'");
                 try{
                     while (query.next()){
