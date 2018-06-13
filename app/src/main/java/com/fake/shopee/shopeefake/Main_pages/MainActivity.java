@@ -133,11 +133,15 @@ public class MainActivity extends Activity {
         }
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if(currentUser!=null)
         generator.userlogin=currentUser.getEmail();
+
         updateUI(currentUser);
     }
 
     private void updateUI(FirebaseUser currentUser) {
+        if(currentUser!=null)
         generator.userlogin = currentUser.getEmail();
     }
 }

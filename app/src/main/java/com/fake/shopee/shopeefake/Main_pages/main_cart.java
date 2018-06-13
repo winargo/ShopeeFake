@@ -3,14 +3,24 @@ package com.fake.shopee.shopeefake.Main_pages;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.fake.shopee.shopeefake.R;
+import com.fake.shopee.shopeefake.generator;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import org.json.JSONObject;
 
 public class main_cart extends Activity {
 
@@ -29,6 +39,33 @@ public class main_cart extends Activity {
         mAuth = FirebaseAuth.getInstance();
 
         backarrowiage = findViewById(R.id.backarrow);
+
+        RequestQueue queue = Volley.newRequestQueue(main_cart.this);
+        /*String url ="http://"+ generator.ip+":3000/insertitem?pemilik="+generator.userlogin+"&stockid="+a+"&jumlah="+"1"+"&penjual="+b;
+        AlertDialog b = new AlertDialog.Builder(main_cart.this,R.style.AppCompatAlertDialogStyle).setTitle("link").setMessage(url).show();
+
+// Request a string response from the provided URL.
+        JsonObjectRequest jsonobject = new JsonObjectRequest(url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        if(response!=null){
+                            Toast.makeText(main_cart.this, "Added to cart", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(main_cart.this, "fail to add", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(main_cart.this, "not working "+error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+// Add the request to the RequestQueue.
+        queue.add(jsonobject);
+        */
 
         backarrowiage.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,6 +2,7 @@ package com.fake.shopee.shopeefake.ProductSearch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,10 @@ import com.fake.shopee.shopeefake.SQLclass;
 import com.fake.shopee.shopeefake.fragment.fragment_profile_sell;
 import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.session_class;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.sql.ResultSet;
@@ -26,6 +31,7 @@ import java.text.NumberFormat;
 public class stock_detail_seller extends AppCompatActivity {
 
     NumberFormat formatter = new DecimalFormat("###,###,###");
+    String tempstorageref="";
     TextView nama,harga,keterangan,kategori,berat,stock,penjual,tittletext,kointext;
     Button edit,hapus;
     ImageView back;
@@ -88,21 +94,37 @@ public class stock_detail_seller extends AppCompatActivity {
         hapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int query = sqlclass.queryexecute("delete from stock where stock_id='"+a+"'");
+                StorageReference storageRef = FirebaseStorage.getInstance().getReference();
 
-                if(query>=1){
+// Create a reference to the file to delete
+                StorageReference desertRef = storageRef.child(tempstorageref);
 
-                    Intent a = new Intent(stock_detail_seller.this,main_profile.class);
-                    startActivity(a);
+// Delete the file
+                desertRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        int query = sqlclass.queryexecute("delete from stock where stock_id='"+a+"'");
 
-                    generator.tempactivity.finish();
-                    finish();
+                        if(query>=1){
 
-                    Toast.makeText(stock_detail_seller.this, "Hapus Berhasil", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Toast.makeText(stock_detail_seller.this, "Hapus Gagal", Toast.LENGTH_SHORT).show();
-                }
+                            Intent a = new Intent(stock_detail_seller.this,main_profile.class);
+                            startActivity(a);
+
+                            generator.tempactivity.finish();
+                            finish();
+
+                            Toast.makeText(stock_detail_seller.this, "Hapus Berhasil", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(stock_detail_seller.this, "Hapus Gagal", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(stock_detail_seller.this, "Hapus Gagal", Toast.LENGTH_SHORT).show();
+                    }
+                });
               /*  ResultSet query = sqlclass.querydata("select * from cart where pemilik='"+session.getusename()+"' and stock_id='"+a+"' and penjual_pemilik='"+penjual.getText().toString()+"'");
                 try{
                     while (query.next()){
@@ -129,6 +151,7 @@ public class stock_detail_seller extends AppCompatActivity {
                 keterangan.setText(result.getString("keterangan"));
                 kategori.setText(result.getString("kategori"));
                 berat.setText(result.getString("berat"));
+                tempstorageref=result.getString("imagefile");
                 harga.setText("Rp "+formatter.format(Integer.parseInt(result.getString("harga").replace(",",""))));
 
                 kointext.setText("Dapatkan "+String.valueOf("20,000"));

@@ -84,8 +84,8 @@ public class stock_detail extends AppCompatActivity {
 
 
 
-                Intent a = new Intent(stock_detail.this,main_cart.class);
-                startActivity(a);
+                //Intent a = new Intent(stock_detail.this,main_cart.class);
+                //startActivity(a);
                 RequestQueue queue = Volley.newRequestQueue(stock_detail.this);
                 String url ="http://"+ generator.ip+":3000/insertitem?pemilik="+session.getusename()+"&stockid="+a+"&jumlah="+"1"+"&penjual="+b;
                 AlertDialog b = new AlertDialog.Builder(stock_detail.this,R.style.AppCompatAlertDialogStyle).setTitle("link").setMessage(url).show();
