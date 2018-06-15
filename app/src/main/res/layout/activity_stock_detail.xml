@@ -42,7 +42,7 @@
         </TextView>
         <Button
             android:layout_width="0sp"
-            android:id="@+id/resultbackback"
+            android:id="@+id/resulttocart"
             android:background="@drawable/cart"
             android:layout_height="15pt"
             android:layout_gravity="center"

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_below="@id/belanjaantitle"
+    android:orientation="vertical"
+    android:id="@+id/checkout1"
+    android:layout_marginTop="8dp"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/itemcart_tickall"
+            android:layout_alignParentLeft="true"
+            android:layout_width="32dp"
+            android:layout_centerInParent="true"
+            android:layout_height="32dp"
+            android:buttonTint="@color/ColorPrimary"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginLeft="16dp"
+            android:id="@+id/itemcart_image"
+            android:layout_width="40dp"
+            android:layout_centerInParent="true"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/itemcart_tickall"
+            android:src="@drawable/flat_1"
+            android:layout_marginRight="8dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/itemcart_sellername"
+            android:layout_toRightOf="@id/itemcart_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_penjual"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/checkout2"
+        android:layout_below="@id/checkout1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#9f9f9f"></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/checkout2"
+        android:layout_width="match_parent"
+        android:id="@+id/cart_subitems"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -17,6 +17,7 @@ import android.widget.ToggleButton;
 
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.generator;
 
 import java.sql.ResultSet;
 import java.text.DecimalFormat;
@@ -147,7 +148,7 @@ public class searchresult extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    ResultSet result = sqlclass.querydata("select * from stock where namaproduk like '%"+passedkey+"%'");
+                    ResultSet result = sqlclass.querydata("select * from stock where namaproduk like '%"+passedkey+"%' and pemilik!='"+ generator.userlogin+"'");
                     NumberFormat formatter = new DecimalFormat("#,###,###");
                     String yourFormattedString="";
                     try {

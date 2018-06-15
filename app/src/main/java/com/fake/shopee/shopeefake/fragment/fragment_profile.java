@@ -47,7 +47,6 @@ public class fragment_profile extends Fragment{
         dikemas = (ImageButton) rootView.findViewById(R.id.dikemas);
         dikirim = (ImageButton) rootView.findViewById(R.id.dikirim);
         pengembalian =(ImageButton) rootView.findViewById(R.id.pengembalian);
-        wallet = (LinearLayout) rootView.findViewById(R.id.shopeepay);
         coin = (LinearLayout) rootView.findViewById(R.id.coinshopee);
 
         coinamount = (TextView) rootView.findViewById(R.id.coinleft);

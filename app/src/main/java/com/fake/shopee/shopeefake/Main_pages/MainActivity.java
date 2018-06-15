@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.fake.shopee.shopeefake.ProductSearch.searching;
 import com.fake.shopee.shopeefake.R;
+import com.fake.shopee.shopeefake.SQLclass;
 import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.upload.activity_galery;
 import com.fake.shopee.shopeefake.upload.camera_test;
@@ -23,12 +24,15 @@ public class MainActivity extends Activity {
 
     ImageButton mainhome,maintimeline,maincamera,mainnotif,mainprofile,maincart,mainsearch;
     session_class session;
+    SQLclass sqLclass;
 
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sqLclass = new SQLclass();
 
         mAuth = FirebaseAuth.getInstance();
         mainhome = (ImageButton) findViewById(R.id.mainhome);

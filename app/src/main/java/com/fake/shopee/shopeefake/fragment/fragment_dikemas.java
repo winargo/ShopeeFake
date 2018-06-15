@@ -18,7 +18,7 @@ public class fragment_dikemas extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.row_belanjaanku, container, false);
+                R.layout.row_carts_header, container, false);
         TextView a = (TextView) rootView.findViewById(R.id.text);
         a.setText("Dikemas");
         return rootView;

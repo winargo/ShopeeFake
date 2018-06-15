@@ -78,6 +78,7 @@ public class SQLclass {
                         + Password + ";";}
             conn = DriverManager.getConnection(ConnURL);
         }catch (Exception e) {
+            SQLclass sql = new SQLclass();
             Log.e("ERROers", e.getMessage()+ConnURL);
         }
         return conn;
