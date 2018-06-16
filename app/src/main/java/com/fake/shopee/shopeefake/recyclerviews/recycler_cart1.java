@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -36,13 +37,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class recycler_cart1 extends RecyclerView.Adapter<recycler_cart1.MyViewHolder> {
+    TextView angkatotal;
     public Context context;
     List<cartsubitems> items ;
     DecimalFormat formatter = new DecimalFormat("###,###,###.00");
 
-    public recycler_cart1(Context con, List<cartsubitems> sel){
+    public recycler_cart1(Context con, List<cartsubitems> sel, TextView angka){
         this.context=con;
         items=sel;
+        angkatotal=angka;
     }
 
     @Override
@@ -54,15 +57,15 @@ public class recycler_cart1 extends RecyclerView.Adapter<recycler_cart1.MyViewHo
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        if(generator.totalcart.getText().toString().equals("")){
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-            generator.totalcart.setText("Rp "+formatter.format(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty())));
+        if(angkatotal.getText().toString().equals("") || angkatotal.getText().toString().equals("Rp 0") || angkatotal.getText().toString().equals("Rp")){
+            angkatotal.setText(angkatotal.getText().toString().replace("Rp ",""));
+            angkatotal.setText(angkatotal.getText().toString().replace(",",""));
+            angkatotal.setText("Rp "+formatter.format(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty())));
         }
         else {
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-            generator.totalcart.setText("Rp "+formatter.format(Double.parseDouble(generator.totalcart.getText().toString())+(items.get(position).getPrice())));
+            angkatotal.setText(angkatotal.getText().toString().replace("Rp ",""));
+            angkatotal.setText(angkatotal.getText().toString().replace(",",""));
+            angkatotal.setText("Rp "+formatter.format(Double.parseDouble(angkatotal.getText().toString())+((items.get(position).getPrice())*Double.parseDouble(items.get(position).getQty()))));
         }
         holder.qty.setText(items.get(position).getQty());
         final String temp=items.get(position).getStockid();
@@ -88,9 +91,9 @@ public class recycler_cart1 extends RecyclerView.Adapter<recycler_cart1.MyViewHo
                                 public void onResponse(JSONObject response) {
                                     if(response!=null){
                                         holder.hide.setVisibility(View.GONE);
-                                        generator.totalcart.setText("Rp 0");
+                                        angkatotal.setText("Rp 0");
                                         Intent a = new Intent(context,main_cart.class);
-                                        context.startActivity(a);
+                                        ((Activity) context).startActivity(a);
                                         ((Activity) context).finish();
                                     }
                                     else {
@@ -115,9 +118,9 @@ public class recycler_cart1 extends RecyclerView.Adapter<recycler_cart1.MyViewHo
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     if(response!=null){
-                                        generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-                                        generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-                                        generator.totalcart.setText("Rp "+formatter.format(Double.parseDouble(generator.totalcart.getText().toString())-(items.get(position).getPrice())));
+                                        angkatotal.setText(angkatotal.getText().toString().replace("Rp ",""));
+                                        angkatotal.setText(angkatotal.getText().toString().replace(",",""));
+                                        angkatotal.setText("Rp "+formatter.format(Double.parseDouble(angkatotal.getText().toString())-(items.get(position).getPrice())));
                                         holder.qty.setText(String.valueOf(Integer.parseInt(holder.qty.getText().toString())-1));
                                     }
                                     else {
@@ -150,9 +153,9 @@ public class recycler_cart1 extends RecyclerView.Adapter<recycler_cart1.MyViewHo
                             @Override
                             public void onResponse(JSONObject response) {
                                 if(response!=null){
-                                    generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-                                    generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-                                    generator.totalcart.setText("Rp "+formatter.format(Double.parseDouble(generator.totalcart.getText().toString())+(items.get(position).getPrice())));
+                                    angkatotal.setText(angkatotal.getText().toString().replace("Rp ",""));
+                                    angkatotal.setText(angkatotal.getText().toString().replace(",",""));
+                                    angkatotal.setText("Rp "+formatter.format(Double.parseDouble(angkatotal.getText().toString())+(items.get(position).getPrice())));
                                     holder.qty.setText(String.valueOf(Integer.parseInt(holder.qty.getText().toString())+1));
                                 }
                                 else {

@@ -41,6 +41,8 @@ public class main_cart extends Activity {
 
     private FirebaseAuth mAuth;
 
+    TextView angkatotal;
+
     recycler_cart mAdapter;
 
     Button checkout;
@@ -74,13 +76,9 @@ public class main_cart extends Activity {
         mAuth = FirebaseAuth.getInstance();
 
         backarrowiage = findViewById(R.id.backarrow);
-        if(generator.totalcart==null){
-            generator.totalcart = findViewById(R.id.total_allcart);
-            generator.totalcart.setText("Rp 0");
-        }else {
-            generator.totalcart.setText("Rp 0");
-        }
 
+        angkatotal = findViewById(R.id.total_allcart);
+        angkatotal.setText("Rp 0");
 
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -207,7 +205,7 @@ public class main_cart extends Activity {
                                     }*/
                                             //itempenjual.add(tempitem);
                                         }
-                                        mAdapter = new recycler_cart(main_cart.this,penjual,itempenjual);
+                                        mAdapter = new recycler_cart(main_cart.this,penjual,itempenjual,angkatotal);
                                         cartitems.setLayoutManager(new GridLayoutManager(main_cart.this, 1));
                                         cartitems.setItemAnimator(new DefaultItemAnimator());
                                         cartitems.setAdapter(mAdapter);

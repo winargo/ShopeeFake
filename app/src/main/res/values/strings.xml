@@ -37,5 +37,6 @@
     <string name="terakhir_dilihat">Terakhir Dilihat</string>
     <string name="lihat_riwayat_pembelanjaan">Lihat Riwayat Pembelanjaan</string>
     <string name="belanjaanku">Belanjaanku</string>
+    <string name="default_notification_channel_id">1</string>
     <string name="apa_aja_sih_kelebihan_berbelanja_berjualan_di_sh"><![CDATA[Apa aja sih kelebihan berbelanja & berjualan di Sh...]]></string>
 </resources>

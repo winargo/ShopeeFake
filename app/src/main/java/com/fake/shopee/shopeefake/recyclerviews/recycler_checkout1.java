@@ -33,138 +33,56 @@ import java.util.List;
 
 public class recycler_checkout1 extends RecyclerView.Adapter<recycler_checkout1.MyViewHolder> {
     public Context context;
+
+    TextView textView,totalall;
     List<cartsubitems> items ;
     DecimalFormat formatter = new DecimalFormat("###,###,###.00");
 
-    public recycler_checkout1(Context con, List<cartsubitems> sel){
+    public recycler_checkout1(Context con, List<cartsubitems> sel,TextView sellertotal,TextView total){
         this.context=con;
+        totalall=total;
         items=sel;
+        textView=sellertotal;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_layout_carts, parent, false);
+                .inflate(R.layout.row_checkout_body, parent, false);
         return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        if(generator.totalcart.getText().toString().equals("")){
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-            generator.totalcart.setText("Rp "+formatter.format(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty())));
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {;
+
+        if(textView.getText().toString().equals("") || textView.getText().toString().equals("Rp 0")){
+            textView.setText(textView.getText().toString().replace("Rp ",""));
+            textView.setText(textView.getText().toString().replace(",",""));
+            textView.setText("Rp "+formatter.format(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty())));
+
         }
         else {
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-            generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-            generator.totalcart.setText("Rp "+formatter.format(Double.parseDouble(generator.totalcart.getText().toString())+(items.get(position).getPrice())));
+            textView.setText(textView.getText().toString().replace("Rp ",""));
+            textView.setText(textView.getText().toString().replace(",",""));
+            textView.setText("Rp "+formatter.format(Double.parseDouble(textView.getText().toString())+(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty()))));
+
         }
-        holder.qty.setText(items.get(position).getQty());
+        if(totalall.getText().toString().equals("") || totalall.getText().toString().equals("Rp 0")){
+            totalall.setText(totalall.getText().toString().replace("Rp ",""));
+            totalall.setText(totalall.getText().toString().replace(",",""));
+            totalall.setText("Rp "+formatter.format(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty())));
+        }
+        else {
+            totalall.setText(totalall.getText().toString().replace("Rp ",""));
+            totalall.setText(totalall.getText().toString().replace(",",""));
+            totalall.setText("Rp "+formatter.format(Double.parseDouble(totalall.getText().toString())+(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty()))));
+        }
+        holder.qty.setText("x "+items.get(position).getQty());
         final String temp=items.get(position).getStockid();
         holder.product.setText(items.get(position).getIproductname());
-        holder.check.setVisibility(View.INVISIBLE);
         holder.price.setText("Rp " + formatter.format(items.get(position).getPrice()));
         Picasso.with(context).load(items.get(position).getImagedir()).resize(200,200).centerCrop().into(holder.imageitem);
 
-        holder.minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(Integer.parseInt(holder.qty.getText().toString())-1==0){
-
-                    RequestQueue queue = Volley.newRequestQueue(context);
-                    String[] url = {""};
-
-
-                    url[0] ="http://"+ generator.ip+":3000/delitem?pemilik="+generator.userlogin+"&stockid="+temp+"&penjual="+items.get(position).getSellet();
-                    Log.e("URl", url[0]);
-                    JsonObjectRequest jsonobject = new JsonObjectRequest(url[0], null,
-                            new Response.Listener<JSONObject>() {
-                                @Override
-                                public void onResponse(JSONObject response) {
-                                    if(response!=null){
-                                        holder.hide.setVisibility(View.GONE);
-                                        generator.totalcart.setText("Rp 0");
-                                        Intent a = new Intent(context,main_cart.class);
-                                        context.startActivity(a);
-                                        ((Activity) context).finish();
-                                    }
-                                    else {
-                                        Toast.makeText(context, "gagal", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(context, "not working "+error.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    queue.add(jsonobject);
-                }
-                else {
-                    RequestQueue queue = Volley.newRequestQueue(context);
-                    String[] url = {""};
-                    url[0] ="http://"+ generator.ip+":3000/reduceitem?pemilik="+generator.userlogin+"&stockid="+temp+"&jumlah="+holder.qty.getText().toString()+"&penjual="+items.get(position).getSellet();
-                    Log.e("URl", url[0]);
-                    JsonObjectRequest jsonobject = new JsonObjectRequest(url[0], null,
-                            new Response.Listener<JSONObject>() {
-                                @Override
-                                public void onResponse(JSONObject response) {
-                                    if(response!=null){
-                                        generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-                                        generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-                                        generator.totalcart.setText("Rp "+formatter.format(Double.parseDouble(generator.totalcart.getText().toString())-(items.get(position).getPrice())));
-                                        holder.qty.setText(String.valueOf(Integer.parseInt(holder.qty.getText().toString())-1));
-                                    }
-                                    else {
-                                        Toast.makeText(context, "gagal", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(context, "not working "+error.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    queue.add(jsonobject);
-
-                }
-            }
-        });
-
-        holder.plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RequestQueue queue = Volley.newRequestQueue(context);
-                String[] url = {""};
-
-
-                url[0] ="http://"+ generator.ip+":3000/plusitem?pemilik="+generator.userlogin+"&stockid="+temp+"&jumlah="+holder.qty.getText().toString()+"&penjual="+items.get(position).getSellet();
-                Log.e("URl", url[0]);
-                JsonObjectRequest jsonobject = new JsonObjectRequest(url[0], null,
-                        new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                if(response!=null){
-                                    generator.totalcart.setText(generator.totalcart.getText().toString().replace("Rp ",""));
-                                    generator.totalcart.setText(generator.totalcart.getText().toString().replace(",",""));
-                                    generator.totalcart.setText("Rp "+formatter.format(Double.parseDouble(generator.totalcart.getText().toString())+(items.get(position).getPrice())));
-                                    holder.qty.setText(String.valueOf(Integer.parseInt(holder.qty.getText().toString())+1));
-                                }
-                                else {
-                                    Toast.makeText(context, "gagal", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(context, "not working "+error.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-                queue.add(jsonobject);
-
-            }
-        });
     }
 
     @Override
@@ -176,21 +94,14 @@ public class recycler_checkout1 extends RecyclerView.Adapter<recycler_checkout1.
         TextView price;
         TextView qty;
         ImageView imageitem;
-        LinearLayout hide;
         TextView product;
-        Button plus,minus;
-        CheckBox check;
 
         public MyViewHolder(View view) {
             super(view);
-            check = view.findViewById(R.id.itemcart_checkbox);
-            hide = view.findViewById(R.id.cart_keepaddingitem);
-            price = view.findViewById(R.id.itemcart_priceitem);
-            qty = view.findViewById(R.id.itemcart_itemqty);
-            product =view.findViewById(R.id.itemcart_itemname);
-            plus = view.findViewById(R.id.itemcart_plus);
-            imageitem = view.findViewById(R.id.itemcart_imagedata);
-            minus = view.findViewById(R.id.itemcart_minus);
+            price = view.findViewById(R.id.itemcheckout_priceitem);
+            qty = view.findViewById(R.id.itemcheckout_qty);
+            product =view.findViewById(R.id.itemcheckout_itemname);
+            imageitem = view.findViewById(R.id.itemcheckout_imagedata);
         }
     }
 }

@@ -30,13 +30,15 @@ import java.util.List;
 
 public class recycler_cart extends RecyclerView.Adapter<recycler_cart.MyViewHolder> {
     public Context context;
+    TextView angkatotal;
     List<String> penjual ;
     List<String[]> itempenjual;
 
-    public recycler_cart(Context con,List<String> sel,List<String[]> items){
+    public recycler_cart(Context con,List<String> sel,List<String[]> items,TextView angka){
         this.context=con;
         penjual=sel;
         itempenjual=items;
+        angkatotal=angka;
     }
 
     @Override
@@ -77,7 +79,7 @@ public class recycler_cart extends RecyclerView.Adapter<recycler_cart.MyViewHold
             }
 
         }
-        recycler_cart1 adapter = new recycler_cart1(context,subitems);
+        recycler_cart1 adapter = new recycler_cart1(context,subitems,angkatotal);
         holder.recycler.setLayoutManager(new GridLayoutManager(context, 1));
         holder.recycler.setItemAnimator(new DefaultItemAnimator());
         holder.recycler.setAdapter(adapter);

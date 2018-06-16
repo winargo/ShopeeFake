@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fake.shopee.shopeefake.R;
@@ -20,10 +21,12 @@ import java.util.List;
 
 public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.MyViewHolder> {
     public Context context;
+    TextView totalall;
     List<String> penjual ;
     List<String[]> itempenjual;
 
-    public recycler_checkout(Context con, List<String> sel, List<String[]> items){
+    public recycler_checkout(Context con, List<String> sel, List<String[]> items,TextView total){
+        totalall=total;
         this.context=con;
         penjual=sel;
         itempenjual=items;
@@ -32,7 +35,7 @@ public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.My
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_carts_header, parent, false);
+                .inflate(R.layout.row_checkout_header, parent, false);
         return new MyViewHolder(itemView);
     }
 
@@ -45,9 +48,6 @@ public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.My
         View v = inflater.inflate(R.layout.row_layout_carts,null);
 
         List<cartsubitems> subitems=new ArrayList<>();
-
-        CheckBox all,peritem;
-        ImageView imageitem;
 
         int count=0;
         List<Integer> theposition=new ArrayList<>();
@@ -67,13 +67,21 @@ public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.My
             }
 
         }
-        recycler_cart1 adapter = new recycler_cart1(context,subitems);
+
+        holder.expedition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                holder.expeditiontxt.setText("");
+            }
+        });
+
+        recycler_checkout1 adapter = new recycler_checkout1(context,subitems,holder.totalseller,totalall);
         holder.recycler.setLayoutManager(new GridLayoutManager(context, 1));
         holder.recycler.setItemAnimator(new DefaultItemAnimator());
         holder.recycler.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
-        holder.all.setVisibility(View.GONE);
 
     }
 
@@ -83,15 +91,20 @@ public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.My
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView seller;
-        CheckBox all;
+        TextView seller,expeditiontxt,totalseller;
         RecyclerView recycler;
+        LinearLayout expedition;
 
         public MyViewHolder(View view) {
             super(view);
             seller = view.findViewById(R.id.itemcart_sellername);
-            recycler = view.findViewById(R.id.cart_subitems);
-            all = view.findViewById(R.id.itemcart_tickall);
+            recycler = view.findViewById(R.id.checked_subitems);
+
+            expedition=view.findViewById(R.id.linear_expedition);
+
+            totalseller = view.findViewById(R.id.total_seller);
+
+            expeditiontxt = view.findViewById(R.id.checkout_expedition);
         }
     }
 }

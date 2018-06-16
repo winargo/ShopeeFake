@@ -37,173 +37,207 @@
             android:layout_weight="1">
         </TextView>
     </LinearLayout>
-    <LinearLayout
-        android:background="#fff"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:layout_weight="1"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:src="@drawable/location"/>
-            <TextView
-                android:layout_marginTop="10sp"
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:hint="Klik untuk pilih"
-                android:gravity="center"
-                android:textAlignment="textStart"
-                android:layout_height="wrap_content" />
-            <ImageView
-                android:layout_width="15sp"
-                android:src="@drawable/arrow"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <ImageView
-            android:layout_width="match_parent"
-            android:src="@drawable/envelope"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_marginTop="10sp"
-        android:id="@+id/recycle_checkout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        
-    </android.support.v7.widget.RecyclerView>
-    
-    <LinearLayout
+            <LinearLayout
+                android:id="@+id/adresschoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:src="@drawable/location" />
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Klik untuk pilih"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="15sp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/envelope" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:src="@drawable/money" />
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Metode Pembayaran"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Bayar Sekarang"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="10sp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Subtotal untuk Produk"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="5pt" />
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Rp 0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="5pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Subtotal Pengiriman"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="5pt" />
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Rp 0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="5pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Total Pembayaran"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="7pt" />
+
+                    <TextView
+                        android:id="@+id/total_checkout"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Rp 0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="7pt" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/execute_checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_gravity="start"
-                android:src="@drawable/money"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="0sp"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="Metode Pembayaran"
-                android:gravity="center"
-                android:textAlignment="textStart"
-                android:layout_marginLeft="10sp"
-                android:layout_height="match_parent" />
-            <TextView
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:text="Bayar Sekarang"
-                android:textAlignment="textEnd"
-                android:gravity="center"
-                android:layout_marginRight="10sp"
-                android:layout_height="match_parent" />
-            <ImageView
-                android:layout_width="10sp"
-                android:layout_gravity="start"
-                android:src="@drawable/arrow"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_margin="4sp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:textSize="5pt"
-                android:textColor="@color/black"
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:text="Subtotal untuk Produk"
-                android:gravity="center"
-                android:textAlignment="textStart"
-                android:layout_marginLeft="10sp"
-                android:layout_height="match_parent" />
-            <TextView
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:text="Rp 0"
-                android:textSize="5pt"
-                android:textAlignment="textEnd"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:layout_marginRight="10sp"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_margin="4sp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:textSize="5pt"
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:text="Subtotal Pengiriman"
-                android:gravity="center"
-                android:textAlignment="textStart"
-                android:layout_marginLeft="10sp"
-                android:layout_height="match_parent" />
-            <TextView
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:text="Rp 0"
-                android:textColor="@color/black"
-                android:textSize="5pt"
-                android:textAlignment="textEnd"
-                android:gravity="center"
-                android:layout_marginRight="10sp"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_margin="4sp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:textSize="7pt"
-                android:textColor="@color/black"
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:text="Total Pembayaran"
-                android:gravity="center"
-                android:textAlignment="textStart"
-                android:layout_marginLeft="10sp"
-                android:layout_height="match_parent" />
-            <TextView
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:textColor="@color/colorAccent"
-                android:text="Rp 0"
-                android:textSize="7pt"
-                android:textAlignment="textEnd"
-                android:gravity="center"
-                android:layout_marginRight="10sp"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </LinearLayout>
-    <Button
         android:layout_margin="5sp"
-        android:padding="5sp"
-        android:textColor="@color/WhiteColor"
         android:backgroundTint="@color/colorAccent"
+        android:padding="5sp"
         android:text="Buat &amp; Bayar Pesanan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textColor="@color/WhiteColor" />
+
 </LinearLayout>

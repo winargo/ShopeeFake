@@ -108,7 +108,17 @@
             android:name=".Main_pages.checkoutpage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Main_pages.add_address"></activity>
+        <activity android:name=".Main_pages.add_address" />
+
+        <service android:name=".notification.firebasenotif">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".notification.firebaseservice"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

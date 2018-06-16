@@ -32,8 +32,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sqLclass = new SQLclass();
-
         mAuth = FirebaseAuth.getInstance();
         mainhome = (ImageButton) findViewById(R.id.mainhome);
         maintimeline = (ImageButton) findViewById(R.id.maintimeline);
