@@ -12,6 +12,7 @@ import static com.mikepenz.iconics.Iconics.TAG;
 
 public class firebaseservice extends FirebaseMessagingService {
     public firebaseservice() {
+
     }
 
 

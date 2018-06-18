@@ -14,7 +14,7 @@ public class generator {
 
     public static TextView statusConnection = null;
     public static String userlogin="";
-    public static String ip="192.168.43.160";
+    public static String ip="10.108.248.107";
     public static String port="";
     public static int isoffline=0;
     public static int isadmin=0;
