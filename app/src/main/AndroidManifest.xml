@@ -118,7 +118,20 @@
             android:name=".Main_pages.checkoutpage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Main_pages.add_address" />
+
+        <activity
+            android:name=".Main_pages.pilih_ongkir"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Main_pages.pilih_alamat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".Main_pages.add_address"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".notification.firebasenotif">
             <intent-filter>

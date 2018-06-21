@@ -118,13 +118,6 @@ public class fragment_profile extends Fragment{
                 startActivity(a);
             }
         });
-        wallet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent a = new Intent(getActivity(),ShopeePayActivity.class);
-                startActivity(a);
-            }
-        });
         return rootView;
     }
 }

@@ -2,6 +2,7 @@ package com.fake.shopee.shopeefake.Main_pages;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.fake.shopee.shopeefake.Admin.AdminActivity;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
 import com.fake.shopee.shopeefake.generator;
@@ -45,6 +47,9 @@ public class main_profile extends FragmentActivity {
     TextView username;
     private FirebaseAuth mAuth;
 
+    SharedPreferences pref ;
+    SharedPreferences.Editor editor;
+
     Bundle bundle=new Bundle();
 
     @Override
@@ -71,6 +76,9 @@ public class main_profile extends FragmentActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        pref = getApplicationContext().getSharedPreferences("shopeefake", MODE_PRIVATE);
+        editor = pref.edit();
+
         initpager();
 
         mainhome = (ImageButton) findViewById(R.id.profilemainmenu);
@@ -79,6 +87,35 @@ public class main_profile extends FragmentActivity {
         mainnotif = (ImageButton) findViewById(R.id.profilenotif);
         mainprofile = (ImageButton) findViewById(R.id.profileprofile);
         maincart = (ImageButton) findViewById(R.id.profilecart);
+
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        dialog.dismiss();
+                        Intent a = new Intent(main_profile.this, AdminActivity.class);
+                        startActivity(a);
+
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        dialog.dismiss();
+                        break;
+                }
+            }
+        };
+
+
+
+        if(pref.getString("admin","").equals("1")){
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this,R.style.AppCompatAlertDialogStyle);
+            builder.setMessage("Admin account detected choice?").setPositiveButton("Admin page", dialogClickListener)
+                    .setNegativeButton("User Page", dialogClickListener).show();
+        }else {
+
+        }
+
 
         sqlclass = new SQLclass();
 
@@ -102,6 +139,7 @@ public class main_profile extends FragmentActivity {
                     Intent i = new Intent(main_profile.this,loginactivity.class);
                     startActivity(i);
                     generator.tempactivity=main_profile.this;
+
                 }
             });
             btnsignup.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +164,22 @@ public class main_profile extends FragmentActivity {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(main_profile.this,main_profile.class);
+                    generator.isadmin=0;
+
+                    if(generator.isadmin==1) {
+                        editor.putString("admin",String.valueOf( generator.isadmin));
+                        editor.commit();
+                    }
+                    else if(generator.isadmin==2){
+                        editor.putString("admin",String.valueOf( generator.isadmin));
+                        editor.commit();
+                    }
+                    else {
+                        editor.putString("admin",String.valueOf( generator.isadmin));
+                        editor.commit();
+                    }
                     FirebaseAuth.getInstance().signOut();
+                    generator.removetoken(main_profile.this);
                     session.setusename("");
                     username.setText("Guest");
                     startActivity(i);

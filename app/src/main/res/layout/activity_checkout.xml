@@ -12,10 +12,8 @@
 
         <ImageButton
             android:id="@+id/checkoutback"
-            android:layout_weight="0.13"
-            android:layout_width="0dp"
+            android:layout_width="40sp"
             android:layout_height="35sp"
-            android:layout_marginLeft="3pt"
             android:layout_gravity="center"
             android:background="@drawable/backarrow"
             />
@@ -72,6 +70,7 @@
                         android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:id="@+id/chosenadress"
                         android:hint="Klik untuk pilih"
                         android:textAlignment="textStart"
                         android:textColor="@color/black" />
@@ -97,11 +96,13 @@
             </android.support.v7.widget.RecyclerView>
 
             <LinearLayout
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -140,6 +141,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4sp"
@@ -162,6 +164,7 @@
                         android:layout_marginRight="10sp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:id="@+id/subtotalcheckout"
                         android:text="Rp 0"
                         android:textAlignment="textEnd"
                         android:textColor="@color/black"
@@ -192,6 +195,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Rp 0"
+                        android:id="@+id/totalongkir"
                         android:textAlignment="textEnd"
                         android:textColor="@color/black"
                         android:textSize="5pt" />

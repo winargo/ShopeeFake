@@ -1,9 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main_pages.add_address">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/belanjaantitle">
+        <ImageButton
+            android:id="@+id/backarrow"
+            android:layout_width="40sp"
+            android:layout_height="60px"
+            android:layout_gravity="center"
+            android:background="@drawable/backarrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8pt"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="Alamat Baru"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/ll1"
+        android:orientation="horizontal">
+        <TextView
+            android:paddingLeft="10sp"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="9pt"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:text="No. Telepon"/>
+        <EditText
+            android:textColor="#000"
+            android:maxLength="15"
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:id="@+id/alamat_telepon"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="10sp"
+            android:hint="Atur Telepon"
+            android:paddingLeft="8dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/ll2"
+        android:orientation="horizontal">
+        <TextView
+            android:paddingLeft="10sp"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="9pt"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:text="Kode Pos"/>
+        <EditText
+            android:textColor="#000"
+            android:maxLength="15"
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:id="@+id/alamat_pos"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="10sp"
+            android:hint="Atur Kode Pos"
+            android:paddingLeft="8dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:id="@+id/ll3"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="8pt"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:text="Alamat Lengkap"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#646464"
+            android:textSize="6pt"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:text="Nama Gedung , Jalan dan Lainnya..."/>
+        <EditText
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            android:id="@+id/alamat_lengkap"
+            android:layout_marginRight="10sp"
+            android:hint="Atur Alamat Lengkap"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"></View>
+    <Button
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorAccent"
+        android:text="KIRIM"
+        android:id="@+id/btnsendalamat"
+        android:layout_height="wrap_content" />
+</LinearLayout>

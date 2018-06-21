@@ -34,15 +34,16 @@ import java.util.List;
 public class recycler_checkout1 extends RecyclerView.Adapter<recycler_checkout1.MyViewHolder> {
     public Context context;
 
-    TextView textView,totalall;
+    TextView textView,totalall,subtotals;
     List<cartsubitems> items ;
     DecimalFormat formatter = new DecimalFormat("###,###,###.00");
 
-    public recycler_checkout1(Context con, List<cartsubitems> sel,TextView sellertotal,TextView total){
-        this.context=con;
+    public recycler_checkout1(Context con, List<cartsubitems> sel,TextView sellertotal,TextView total,TextView subtotal){
+            this.context=con;
         totalall=total;
         items=sel;
         textView=sellertotal;
+        subtotals=subtotal;
     }
 
     @Override
@@ -76,6 +77,16 @@ public class recycler_checkout1 extends RecyclerView.Adapter<recycler_checkout1.
             totalall.setText(totalall.getText().toString().replace("Rp ",""));
             totalall.setText(totalall.getText().toString().replace(",",""));
             totalall.setText("Rp "+formatter.format(Double.parseDouble(totalall.getText().toString())+(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty()))));
+        }
+        if(subtotals.getText().toString().equals("") || subtotals.getText().toString().equals("Rp 0")){
+            subtotals.setText(subtotals.getText().toString().replace("Rp ",""));
+            subtotals.setText(subtotals.getText().toString().replace(",",""));
+            subtotals.setText("Rp "+formatter.format(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty())));
+        }
+        else {
+            subtotals.setText(subtotals.getText().toString().replace("Rp ",""));
+            subtotals.setText(subtotals.getText().toString().replace(",",""));
+            subtotals.setText("Rp "+formatter.format(Double.parseDouble(subtotals.getText().toString())+(items.get(position).getPrice()*Double.parseDouble(items.get(position).getQty()))));
         }
         holder.qty.setText("x "+items.get(position).getQty());
         final String temp=items.get(position).getStockid();

@@ -29,6 +29,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
@@ -39,6 +40,7 @@ import com.fake.shopee.shopeefake.recyclerviews.recycler_checkout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -47,10 +49,10 @@ import java.util.concurrent.TimeoutException;
 
 public class checkoutpage extends AppCompatActivity {
     TextView title,address;
-    LinearLayout adresschoice;
     ImageButton back;
+    LinearLayout pilihalamat,pilihongkir;
     
-    TextView totalcheckout;
+    TextView totalcheckout,totalongkir,subtotal;
 
     recycler_checkout mAdapter;
 
@@ -58,6 +60,7 @@ public class checkoutpage extends AppCompatActivity {
 
     List<String> penjual;
     List<String[]> itempenjual;
+
 
     Button executecheckout;
 
@@ -74,20 +77,29 @@ public class checkoutpage extends AppCompatActivity {
 
         sqLclass = new SQLclass();
 
-        totalcheckout = findViewById(R.id.total_checkout);
-        totalcheckout.setText("Rp 0");
+        pilihalamat = findViewById(R.id.adresschoice);
 
-        adresschoice = findViewById(R.id.linear_expedition);
+
+        generator.totalcheckout=null;
+        generator.hargaongkirtemp = 0.0d;
+        generator.subtotalcheckout=null;
+        totalcheckout = findViewById(R.id.total_checkout);
+        generator.totalcheckout = findViewById(R.id.total_checkout);
+        subtotal = findViewById(R.id.subtotalcheckout);
+
+        totalongkir = findViewById(R.id.totalongkir);
+        generator.subtotalcheckout=totalongkir;
+        totalcheckout.setText("Rp 0");
+        totalongkir.setText("Rp 0");
+        subtotal.setText("Rp 0");
 
         executecheckout = findViewById(R.id.execute_checkout);
 
-        address = findViewById(R.id.checkout_expedition);
+        address = findViewById(R.id.chosenadress);
 
         recycler = findViewById(R.id.recycle_checkout);
 
         title = findViewById(R.id.title_checkout);
-
-        adresschoice = findViewById(R.id.adresschoice);
 
         back = findViewById(R.id.checkoutback);
 
@@ -100,26 +112,92 @@ public class checkoutpage extends AppCompatActivity {
 
         title.setText("Checkout Pesanan");
 
-        adresschoice.setOnClickListener(new View.OnClickListener() {
+        pilihalamat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent alamat = new Intent(checkoutpage.this,pilih_alamat.class);
+                generator.chosenadress=address;
+                startActivity(alamat);
             }
         });
 
         executecheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showNotification("Shopee","you Pressed Checkout");
 
-                NotificationCompat.Builder b = new NotificationCompat.Builder(getBaseContext());
+                final RequestQueue queue = Volley.newRequestQueue(checkoutpage.this);
+                final String[] url = {"http://" + generator.ip + ":3000/getitem/" + generator.userlogin};
+
+                final JsonArrayRequest jsonarray = new JsonArrayRequest(Request.Method.GET, url[0], null,
+                        new Response.Listener<JSONArray>() {
+                            @Override
+                            public void onResponse(JSONArray response) {
+                                if(response!=null){
+                                    try {
+
+                                        for (int i = 0; i < response.length(); i++) {
+
+                                            final String[] tempsting = new String[5];
+                                            tempsting[0] = response.getJSONObject(i).getString("pemilik");
+                                            tempsting[1] = response.getJSONObject(i).getString("stock_id");
+                                            tempsting[2] = response.getJSONObject(i).getString("imagedata");
+                                            tempsting[3] = response.getJSONObject(i).getString("jumlah");
+                                            tempsting[4] = response.getJSONObject(i).getString("penjual_pemilik");
+                                            itempenjual.add(tempsting);
+                                            url[0] = "http://" + generator.ip + ":3000/checkout?pemilik="+response.getJSONObject(i).getString("pemilik")+"&stockid="+response.getJSONObject(i).getString("stock_id")+"&jumlah="+response.getJSONObject(i).getString("jumlah")+"&penjual="+response.getJSONObject(i).getString("penjual_pemilik")+"&imagedata='"+response.getJSONObject(i).getString("imagedata")+"'&address='"+generator.chosenadress.getText().toString().replace("\n", "").replace(" ","")+"'";
+                                            Log.e("url", url[0] );
+                                            JsonObjectRequest jsonarray1 = new JsonObjectRequest(Request.Method.GET, url[0], null,
+                                                    new Response.Listener<JSONObject>() {
+                                                        @Override
+                                                        public void onResponse(JSONObject response) {
+                                                            if(response!=null){
+                                                                generator.sendnotification(checkoutpage.this,tempsting[4],generator.userlogin);
+                                                            }
+                                                            else {
+                                                                Toast.makeText(checkoutpage.this, "fail to add", Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        }
+                                                    }, new Response.ErrorListener() {
+                                                @Override
+                                                public void onErrorResponse(VolleyError error) {
+                                                    Toast.makeText(checkoutpage.this, "not working notif"+error.toString(), Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                            queue.add(jsonarray1);
+                                            
+                                        }
+                                        showNotification("Shopee","Pesanan sudah di kirim ke penjual");
+                                        //Toast.makeText(checkoutpage.this, penjual, Toast.LENGTH_SHORT).show();
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                                else {
+                                    Toast.makeText(checkoutpage.this, "fail to add", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(checkoutpage.this, "not working "+error.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+// Add the request to the RequestQueue.
+                queue.add(jsonarray);
+
+                
+                
+
+
+            /*    NotificationCompat.Builder b = new NotificationCompat.Builder(getBaseContext());
                 b.setAutoCancel(true)
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(R.drawable.logo)
                         .setContentTitle("title");
                 NotificationManager nm = (NotificationManager)getBaseContext().getSystemService(Context.NOTIFICATION_SERVICE);
-                nm.notify(1, b.build());
+                nm.notify(1, b.build());*/
             }
         });
 
@@ -203,7 +281,7 @@ public class checkoutpage extends AppCompatActivity {
                                     }*/
                                             //itempenjual.add(tempitem);
                                         }
-                                        mAdapter = new recycler_checkout(checkoutpage.this,penjual,itempenjual,totalcheckout);
+                                        mAdapter = new recycler_checkout(checkoutpage.this,penjual,itempenjual,subtotal,totalongkir,totalcheckout);
                                         recycler.setLayoutManager(new GridLayoutManager(checkoutpage.this, 1));
                                         recycler.setItemAnimator(new DefaultItemAnimator());
                                         recycler.setAdapter(mAdapter);

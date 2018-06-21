@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.fake.shopee.shopeefake.Main_pages.main_profile;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
+import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.session_class;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -121,6 +122,7 @@ public class fragement_signup extends Fragment {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 session_class session = new session_class(getActivity());
                                 session.setusename(user.getEmail());
+                                generator.userlogin=user.getEmail();
                                 z = "Signed in As " + user.getEmail();
                                 isSuccess = true;
                                 onPostExecute(z);

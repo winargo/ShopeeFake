@@ -1,17 +1,18 @@
 package com.fake.shopee.shopeefake.recyclerviews;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.fake.shopee.shopeefake.Main_pages.pilih_ongkir;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.generator;
 import com.fake.shopee.shopeefake.objects.cartsubitems;
@@ -21,12 +22,14 @@ import java.util.List;
 
 public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.MyViewHolder> {
     public Context context;
-    TextView totalall;
+    TextView totalall,subtotal,totalongkir;
     List<String> penjual ;
     List<String[]> itempenjual;
 
-    public recycler_checkout(Context con, List<String> sel, List<String[]> items,TextView total){
-        totalall=total;
+    public recycler_checkout(Context con, List<String> sel, List<String[]> items,TextView subtotal,TextView ongkir,TextView all){
+        totalall = all;
+        this.subtotal = subtotal;
+        totalongkir=ongkir;
         this.context=con;
         penjual=sel;
         itempenjual=items;
@@ -68,18 +71,20 @@ public class recycler_checkout extends RecyclerView.Adapter<recycler_checkout.My
 
         }
 
-        holder.expedition.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                holder.expeditiontxt.setText("");
-            }
-        });
-
-        recycler_checkout1 adapter = new recycler_checkout1(context,subitems,holder.totalseller,totalall);
+        recycler_checkout1 adapter = new recycler_checkout1(context,subitems,holder.totalseller,totalall,subtotal);
         holder.recycler.setLayoutManager(new GridLayoutManager(context, 1));
         holder.recycler.setItemAnimator(new DefaultItemAnimator());
         holder.recycler.setAdapter(adapter);
+
+        holder.expedition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generator.chosenongkir=holder.expeditiontxt;
+                Intent a = new Intent(context,pilih_ongkir.class);
+                ((Activity) context).startActivity(a);
+            }
+        });
         adapter.notifyDataSetChanged();
 
 

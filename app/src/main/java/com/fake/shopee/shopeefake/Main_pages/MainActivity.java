@@ -1,16 +1,27 @@
 package com.fake.shopee.shopeefake.Main_pages;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.fake.shopee.shopeefake.ProductSearch.searching;
+import com.fake.shopee.shopeefake.ProductSearch.stock_detail;
 import com.fake.shopee.shopeefake.R;
 import com.fake.shopee.shopeefake.SQLclass;
 import com.fake.shopee.shopeefake.generator;
@@ -19,11 +30,18 @@ import com.fake.shopee.shopeefake.upload.camera_test;
 import com.fake.shopee.shopeefake.session_class;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.internal.InternalTokenProvider;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends Activity {
 
     ImageButton mainhome,maintimeline,maincamera,mainnotif,mainprofile,maincart,mainsearch;
     session_class session;
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
     SQLclass sqLclass;
 
     private FirebaseAuth mAuth;
@@ -31,6 +49,21 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        pref = this.getApplicationContext().getSharedPreferences("shopeefake", MODE_PRIVATE);
+        editor = pref.edit();
+
+        if(generator.isadmin==0) {
+            generator.isadmin = Integer.parseInt(pref.getString("admin", ""));
+        }
+
+        if(!generator.refreshedToken.equals("")) {
+            editor.putString("token", generator.refreshedToken);
+            editor.commit();
+        }
+        else {
+            generator.refreshedToken = pref.getString("token","");
+        }
 
         mAuth = FirebaseAuth.getInstance();
         mainhome = (ImageButton) findViewById(R.id.mainhome);
@@ -145,5 +178,9 @@ public class MainActivity extends Activity {
     private void updateUI(FirebaseUser currentUser) {
         if(currentUser!=null)
         generator.userlogin = currentUser.getEmail();
+
+
     }
+    
+
 }

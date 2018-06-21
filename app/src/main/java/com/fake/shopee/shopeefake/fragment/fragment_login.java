@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -34,6 +35,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static android.content.ContentValues.TAG;
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by Riandy on 12/10/2017.
@@ -149,13 +151,16 @@ public class fragment_login extends Fragment{
                                     }
                                     else {
                                         if(admindata!=0) {
+                                            generator.isadmin=1;
                                             DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
                                                 @Override
                                                 public void onClick(DialogInterface dialog, int which) {
                                                     switch (which) {
                                                         case DialogInterface.BUTTON_POSITIVE:
                                                             z = "Signed in As " + user.getEmail();
+
                                                             generator.userlogin=user.getEmail().toString();
+                                                            generator.sendtoken(getActivity());
                                                             isSuccess = true;
                                                             generator.tempactivity.finish();
                                                             generator.tempactivity=null;
@@ -166,6 +171,7 @@ public class fragment_login extends Fragment{
 
                                                         case DialogInterface.BUTTON_NEGATIVE:
                                                             z = "Signed in As " + user.getEmail();
+                                                            generator.sendtoken(getActivity());
                                                             generator.userlogin=user.getEmail().toString();
                                                             isSuccess = true;
                                                             session_class.tempcommand=0;
@@ -176,13 +182,47 @@ public class fragment_login extends Fragment{
                                                     }
                                                 }
                                             };
+                                            SharedPreferences pref = getActivity().getApplicationContext().getSharedPreferences("shopeefake", MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = pref.edit();
 
-                                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),R.style.AppCompatAlertDialogStyle);
+                                            if(generator.isadmin==1) {
+                                                editor.putString("admin",String.valueOf( generator.isadmin));
+                                                editor.commit();
+                                            }
+                                            else if(generator.isadmin==2){
+                                                editor.putString("admin",String.valueOf( generator.isadmin));
+                                                editor.commit();
+                                            }
+                                            else {
+                                                editor.putString("admin",String.valueOf( generator.isadmin));
+                                                editor.commit();
+                                            }
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                             builder.setMessage("Admin account detected choice?").setPositiveButton("Admin page", dialogClickListener)
                                                     .setNegativeButton("User Page", dialogClickListener).show();
                                         }
                                         else {
+                                            generator.isadmin=2;
+
+                                            SharedPreferences pref = getActivity().getApplicationContext().getSharedPreferences("shopeefake", MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = pref.edit();
+
+                                            if(generator.isadmin==1) {
+                                                editor.putString("admin",String.valueOf( generator.isadmin));
+                                                editor.commit();
+                                            }
+                                            else if(generator.isadmin==2){
+                                                editor.putString("admin",String.valueOf( generator.isadmin));
+                                                editor.commit();
+                                            }
+                                            else {
+                                                editor.putString("admin",String.valueOf( generator.isadmin));
+                                                editor.commit();
+                                            }
+
                                             z = "Signed in As " + user.getEmail();
+                                            generator.userlogin = user.getEmail();
+                                            generator.sendtoken(getActivity());
                                             isSuccess = true;
                                             generator.tempactivity.finish();
                                             generator.tempactivity=null;
