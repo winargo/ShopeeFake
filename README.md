@@ -48,4 +48,4 @@ It is intended for educational purposes and not for commercial distribution.
 ## 🚀 Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/ShopeeFake.git
+   git clone https://github.com/winargo/ShopeeFake.git
